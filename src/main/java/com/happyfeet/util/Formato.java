@@ -36,7 +36,7 @@ public final class Formato {
         if (valor == null) {
             return "-";
         }
-        NumberFormat nf = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("es-CO"));
+        NumberFormat nf = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("es-GT"));
         return nf.format(valor);
     }
 

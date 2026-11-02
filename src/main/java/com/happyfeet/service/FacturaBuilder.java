@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class FacturaBuilder {
 
-    public static final BigDecimal TASA_IVA = new BigDecimal("0.19");
+    public static final BigDecimal TASA_IVA = new BigDecimal("0.12");
 
     private int duenoId;
     private String duenoNombre;
