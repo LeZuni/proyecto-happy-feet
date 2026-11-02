@@ -71,16 +71,16 @@ INSERT INTO cita_estados (nombre, descripcion) VALUES
 
 -- El dueño 1 es la propia clínica: sirve como "dueño" de las mascotas en adopción
 INSERT INTO duenos (nombre_completo, documento_identidad, direccion, telefono, email, contacto_emergencia) VALUES
-('Clínica Happy Feet (Refugio)', '900123456-7', 'Calle 45 # 12-34, Bogotá', '6015550123', 'refugio@happyfeet.com', NULL),
-('María Fernanda López', '1012345678', 'Carrera 7 # 45-10, Bogotá', '3001112233', 'maria.lopez@email.com', 'Pedro López - 3001112200'),
-('Carlos Andrés Ramírez', '80123456', 'Calle 100 # 15-20, Bogotá', '3012223344', 'carlos.ramirez@email.com', 'Sandra Ramírez - 3012223300'),
-('Laura Sofía Gómez', '1023456789', 'Av. Boyacá # 63-25, Bogotá', '3023334455', 'laura.gomez@email.com', NULL),
-('Juan Pablo Martínez', '79234567', 'Calle 80 # 20-15, Bogotá', '3034445566', 'juan.martinez@email.com', 'Ana Martínez - 3034445500'),
-('Ana Milena Torres', '52345678', 'Carrera 15 # 90-12, Bogotá', '3045556677', 'ana.torres@email.com', NULL),
-('Diego Alejandro Castro', '1034567890', 'Calle 53 # 24-30, Bogotá', '3056667788', 'diego.castro@email.com', 'Luisa Castro - 3056667700'),
-('Valentina Rojas', '1045678901', 'Carrera 30 # 40-50, Bogotá', '3067778899', 'valentina.rojas@email.com', NULL),
-('Santiago Herrera', '1056789012', 'Calle 72 # 10-05, Bogotá', '3078889900', 'santiago.herrera@email.com', 'Marta Herrera - 3078889911'),
-('Camila Vargas', '1067890123', 'Av. 68 # 25-40, Bogotá', '3089990011', 'camila.vargas@email.com', NULL);
+('Clínica Happy Feet (Refugio)', '1234567-8', '12 calle 5-34, zona 10, Ciudad de Guatemala', '25550123', 'refugio@happyfeet.com', NULL),
+('María Fernanda López', '2456789010101', '7a avenida 12-45, zona 1, Ciudad de Guatemala', '55501112', 'maria.lopez@email.com', 'Pedro López - 55501100'),
+('Carlos Andrés Ramírez', '2567890120101', '15 calle 3-20, zona 10, Ciudad de Guatemala', '55502223', 'carlos.ramirez@email.com', 'Sandra Ramírez - 55502200'),
+('Laura Sofía Gómez', '2678901230101', 'Calzada Roosevelt 25-30, zona 11, Ciudad de Guatemala', '55503334', 'laura.gomez@email.com', NULL),
+('Juan Pablo Martínez', '2789012340101', '6a avenida 8-15, zona 4, Mixco', '55504445', 'juan.martinez@email.com', 'Ana Martínez - 55504400'),
+('Ana Milena Torres', '2890123450101', '3a calle 10-12, zona 2, Mixco', '55505556', 'ana.torres@email.com', NULL),
+('Diego Alejandro Castro', '2901234560101', 'Boulevard Liberación 20-30, zona 9, Ciudad de Guatemala', '55506667', 'diego.castro@email.com', 'Luisa Castro - 55506600'),
+('Valentina Rojas', '3012345670101', '4a avenida 15-40, zona 14, Ciudad de Guatemala', '55507778', 'valentina.rojas@email.com', NULL),
+('Santiago Herrera', '3123456780101', 'Calle Real 5-05, Villa Nueva', '55508889', 'santiago.herrera@email.com', 'Marta Herrera - 55508811'),
+('Camila Vargas', '3234567890101', '18 calle 22-40, zona 15, Ciudad de Guatemala', '55509990', 'camila.vargas@email.com', NULL);
 
 INSERT INTO mascotas (dueno_id, nombre, raza_id, fecha_nacimiento, sexo, peso_actual, microchip, tatuaje, url_foto, alergias, condiciones_preexistentes) VALUES
 (2, 'Max', 1, '2019-03-15', 'Macho', 30.50, '985112000000001', NULL, 'https://fotos.happyfeet.com/max.jpg', 'Penicilina', 'Displasia de cadera leve'),
@@ -101,10 +101,10 @@ INSERT INTO mascotas (dueno_id, nombre, raza_id, fecha_nacimiento, sexo, peso_ac
 -- =========== MÓDULO 2: VETERINARIOS, CITAS Y CONSULTAS ===========
 
 INSERT INTO veterinarios (nombre_completo, documento_identidad, licencia_profesional, especialidad, telefono, email, fecha_contratacion) VALUES
-('Dra. Patricia Salazar', '51111111', 'MV-10001', 'Medicina general', '3101110001', 'patricia.salazar@happyfeet.com', '2018-02-01'),
-('Dr. Andrés Mejía', '79222222', 'MV-10002', 'Cirugía', '3101110002', 'andres.mejia@happyfeet.com', '2019-06-15'),
-('Dra. Carolina Peña', '52333333', 'MV-10003', 'Odontología veterinaria', '3101110003', 'carolina.pena@happyfeet.com', '2020-09-01'),
-('Dr. Felipe Ortiz', '80444444', 'MV-10004', 'Animales exóticos', '3101110004', 'felipe.ortiz@happyfeet.com', '2021-03-10');
+('Dra. Patricia Salazar', '3345678900101', 'MV-10001', 'Medicina general', '55101111', 'patricia.salazar@happyfeet.com', '2018-02-01'),
+('Dr. Andrés Mejía', '3456789010101', 'MV-10002', 'Cirugía', '55102222', 'andres.mejia@happyfeet.com', '2019-06-15'),
+('Dra. Carolina Peña', '3567890120101', 'MV-10003', 'Odontología veterinaria', '55103333', 'carolina.pena@happyfeet.com', '2020-09-01'),
+('Dr. Felipe Ortiz', '3678901230101', 'MV-10004', 'Animales exóticos', '55104444', 'felipe.ortiz@happyfeet.com', '2021-03-10');
 
 -- Estados: 1 Programada, 2 Confirmada, 3 En Proceso, 4 Finalizada, 5 Cancelada, 6 No Asistió
 INSERT INTO citas (mascota_id, veterinario_id, fecha_hora, motivo, estado_id, observaciones) VALUES
@@ -126,9 +126,9 @@ INSERT INTO consultas_medicas (mascota_id, veterinario_id, cita_id, fecha_hora, 
 (6, 4, NULL, DATE_SUB(NOW(), INTERVAL 7 DAY), 'Chequeo general', NULL, 'Sana', 'Seguir con el plan de vacunación', NULL, 6.10, 38.30);
 
 INSERT INTO procedimientos_especiales (mascota_id, veterinario_id, tipo_procedimiento, nombre_procedimiento, fecha_hora, duracion_estimada_minutos, informacion_preoperatoria, detalle_procedimiento, complicaciones, seguimiento_postoperatorio, proximo_control, estado, costo_procedimiento) VALUES
-(2, 1, 'Cirugía', 'Esterilización (ovariohisterectomía)', DATE_SUB(NOW(), INTERVAL 25 DAY), 60, 'Ayuno de 12 horas, exámenes normales', 'Ovariohisterectomía sin novedades', NULL, 'Reposo 10 días, collar isabelino, curación diaria', DATE_SUB(CURDATE(), INTERVAL 10 DAY), 'Finalizado', 280000.00),
-(5, 3, 'Limpieza Dental', 'Profilaxis dental con ultrasonido', DATE_SUB(NOW(), INTERVAL 12 DAY), 45, 'Anestesia ligera', 'Remoción de sarro y pulido', NULL, 'Dieta blanda por 2 días', NULL, 'Finalizado', 150000.00),
-(3, 2, 'Cirugía', 'Extracción de masa cutánea', TIMESTAMP(DATE_ADD(CURDATE(), INTERVAL 5 DAY), '08:30:00'), 90, 'Exámenes de sangre previos pendientes', 'Se retirará una masa en el costado izquierdo', NULL, NULL, NULL, 'Programado', 350000.00);
+(2, 1, 'Cirugía', 'Esterilización (ovariohisterectomía)', DATE_SUB(NOW(), INTERVAL 25 DAY), 60, 'Ayuno de 12 horas, exámenes normales', 'Ovariohisterectomía sin novedades', NULL, 'Reposo 10 días, collar isabelino, curación diaria', DATE_SUB(CURDATE(), INTERVAL 10 DAY), 'Finalizado', 800.00),
+(5, 3, 'Limpieza Dental', 'Profilaxis dental con ultrasonido', DATE_SUB(NOW(), INTERVAL 12 DAY), 45, 'Anestesia ligera', 'Remoción de sarro y pulido', NULL, 'Dieta blanda por 2 días', NULL, 'Finalizado', 450.00),
+(3, 2, 'Cirugía', 'Extracción de masa cutánea', TIMESTAMP(DATE_ADD(CURDATE(), INTERVAL 5 DAY), '08:30:00'), 90, 'Exámenes de sangre previos pendientes', 'Se retirará una masa en el costado izquierdo', NULL, NULL, NULL, 'Programado', 1200.00);
 
 -- Eventos: 1 Vacunación, 2 Consulta General, 3 Cirugía, 4 Desparasitación, 5 Control de Peso, 9 Limpieza Dental
 INSERT INTO historial_medico (mascota_id, fecha_evento, evento_tipo_id, descripcion, diagnostico, tratamiento_recomendado, veterinario_id, consulta_id, procedimiento_id) VALUES
@@ -147,30 +147,30 @@ INSERT INTO historial_medico (mascota_id, fecha_evento, evento_tipo_id, descripc
 -- =========== MÓDULO 3: PROVEEDORES E INVENTARIO ===========
 
 INSERT INTO proveedores (nombre_empresa, contacto, telefono, email, direccion, sitio_web) VALUES
-('VetFarma S.A.S.', 'Jorge Ruiz', '6017001001', 'ventas@vetfarma.com', 'Zona Industrial, Bogotá', 'www.vetfarma.com'),
-('BioVacunas Colombia', 'Marcela Díaz', '6017002002', 'pedidos@biovacunas.co', 'Calle 13 # 50-20, Bogotá', 'www.biovacunas.co'),
-('MediSuministros Vet', 'Camilo Prada', '6017003003', 'contacto@medisuministros.com', 'Av. Américas # 40-10, Bogotá', NULL),
-('PetFood Distribuciones', 'Natalia Rueda', '6017004004', 'ventas@petfood.com', 'Carrera 68 # 12-30, Bogotá', 'www.petfood.com');
+('VetFarma S.A.', 'Jorge Ruiz', '22001001', 'ventas@vetfarma.com', 'Zona Industrial, zona 12, Ciudad de Guatemala', 'www.vetfarma.com'),
+('BioVacunas Guatemala', 'Marcela Díaz', '22002002', 'pedidos@biovacunas.gt', '13 calle 50-20, zona 11, Ciudad de Guatemala', 'www.biovacunas.gt'),
+('MediSuministros Vet', 'Camilo Prada', '22003003', 'contacto@medisuministros.com', 'Avenida Petapa 40-10, zona 12, Ciudad de Guatemala', NULL),
+('PetFood Distribuciones', 'Natalia Rueda', '22004004', 'ventas@petfood.com', '6a calle 12-30, zona 9, Ciudad de Guatemala', 'www.petfood.com');
 
 -- Tipos: 1 Medicamento, 2 Vacuna, 3 Insumo Médico, 4 Alimento, 5 Accesorio
 INSERT INTO inventario (nombre_producto, producto_tipo_id, descripcion, fabricante, proveedor_id, lote, cantidad_stock, stock_minimo, unidad_medida, fecha_vencimiento, precio_compra, precio_venta, requiere_receta) VALUES
-('Amoxicilina 500mg', 1, 'Antibiótico de amplio espectro', 'Laboratorios Vet', 1, 'AMX-2401', 120, 20, 'tableta', DATE_ADD(CURDATE(), INTERVAL 400 DAY), 900.00, 1500.00, TRUE),
-('Meloxicam 1.5mg/ml', 1, 'Antiinflamatorio', 'Boehringer', 1, 'MEL-2402', 15, 5, 'frasco', DATE_ADD(CURDATE(), INTERVAL 300 DAY), 18000.00, 28000.00, TRUE),
-('Ivermectina 1%', 1, 'Antiparasitario', 'Laboratorios Vet', 1, 'IVE-2403', 30, 10, 'frasco', DATE_ADD(CURDATE(), INTERVAL 250 DAY), 7000.00, 12000.00, FALSE),
-('Dipirona 500mg', 1, 'Analgésico y antipirético', 'Laboratorios Vet', 3, 'DIP-2404', 80, 20, 'tableta', DATE_ADD(CURDATE(), INTERVAL 500 DAY), 400.00, 800.00, TRUE),
-('Prednisolona 5mg', 1, 'Corticoide', 'Laboratorios Vet', 1, 'PRE-2405', 40, 10, 'tableta', DATE_ADD(CURDATE(), INTERVAL 25 DAY), 600.00, 1200.00, TRUE),
-('Omeprazol 20mg', 1, 'Protector gástrico', 'Laboratorios Vet', 3, 'OME-2406', 8, 15, 'cápsula', DATE_ADD(CURDATE(), INTERVAL 200 DAY), 500.00, 1000.00, FALSE),
-('Vacuna Triple Felina', 2, 'Panleucopenia, rinotraqueítis y calicivirus', 'Zoetis', 2, 'VTF-9001', 25, 5, 'dosis', DATE_ADD(CURDATE(), INTERVAL 180 DAY), 18000.00, 30000.00, FALSE),
-('Vacuna Antirrábica', 2, 'Vacuna contra la rabia', 'Zoetis', 2, 'VAR-9002', 60, 10, 'dosis', DATE_ADD(CURDATE(), INTERVAL 220 DAY), 15000.00, 30000.00, FALSE),
-('Vacuna Quíntuple Canina', 2, 'Moquillo, hepatitis, parvovirus, parainfluenza', 'MSD', 2, 'VQC-9003', 40, 8, 'dosis', DATE_ADD(CURDATE(), INTERVAL 150 DAY), 28000.00, 45000.00, FALSE),
-('Vacuna Bordetella', 2, 'Tos de las perreras', 'MSD', 2, 'VBO-9004', 6, 5, 'dosis', DATE_SUB(CURDATE(), INTERVAL 10 DAY), 22000.00, 38000.00, FALSE),
-('Jeringas 5ml', 3, 'Jeringas desechables', 'MedPlus', 3, 'JER-5001', 200, 50, 'unidad', DATE_ADD(CURDATE(), INTERVAL 700 DAY), 300.00, 800.00, FALSE),
-('Gasas estériles', 3, 'Paquete de gasas estériles', 'MedPlus', 3, 'GAS-5002', 150, 40, 'unidad', DATE_ADD(CURDATE(), INTERVAL 600 DAY), 200.00, 500.00, FALSE),
-('Guantes de látex', 3, 'Guantes desechables', 'MedPlus', 3, 'GUA-5003', 300, 100, 'unidad', DATE_ADD(CURDATE(), INTERVAL 800 DAY), 250.00, 600.00, FALSE),
-('Sutura Nylon 3-0', 3, 'Hilo de sutura quirúrgica', 'SurgiVet', 3, 'SUT-5004', 5, 10, 'unidad', DATE_ADD(CURDATE(), INTERVAL 500 DAY), 7000.00, 12000.00, FALSE),
-('Alimento Renal 2kg', 4, 'Dieta para enfermedad renal', 'Hill''s', 4, 'ALI-7001', 20, 5, 'bolsa', DATE_ADD(CURDATE(), INTERVAL 270 DAY), 38000.00, 55000.00, FALSE),
-('Collar isabelino', 5, 'Collar de protección post-cirugía', 'PetCare', 4, NULL, 25, 5, 'unidad', NULL, 12000.00, 25000.00, FALSE),
-('Antipulgas NexGard', 1, 'Antipulgas y garrapatas masticable', 'Boehringer', 1, 'NEX-2407', 35, 10, 'tableta', DATE_ADD(CURDATE(), INTERVAL 350 DAY), 45000.00, 70000.00, FALSE);
+('Amoxicilina 500mg', 1, 'Antibiótico de amplio espectro', 'Laboratorios Vet', 1, 'AMX-2401', 120, 20, 'tableta', DATE_ADD(CURDATE(), INTERVAL 400 DAY), 3.00, 5.00, TRUE),
+('Meloxicam 1.5mg/ml', 1, 'Antiinflamatorio', 'Boehringer', 1, 'MEL-2402', 15, 5, 'frasco', DATE_ADD(CURDATE(), INTERVAL 300 DAY), 55.00, 90.00, TRUE),
+('Ivermectina 1%', 1, 'Antiparasitario', 'Laboratorios Vet', 1, 'IVE-2403', 30, 10, 'frasco', DATE_ADD(CURDATE(), INTERVAL 250 DAY), 25.00, 40.00, FALSE),
+('Dipirona 500mg', 1, 'Analgésico y antipirético', 'Laboratorios Vet', 3, 'DIP-2404', 80, 20, 'tableta', DATE_ADD(CURDATE(), INTERVAL 500 DAY), 1.50, 3.00, TRUE),
+('Prednisolona 5mg', 1, 'Corticoide', 'Laboratorios Vet', 1, 'PRE-2405', 40, 10, 'tableta', DATE_ADD(CURDATE(), INTERVAL 25 DAY), 2.00, 4.00, TRUE),
+('Omeprazol 20mg', 1, 'Protector gástrico', 'Laboratorios Vet', 3, 'OME-2406', 8, 15, 'cápsula', DATE_ADD(CURDATE(), INTERVAL 200 DAY), 1.80, 3.50, FALSE),
+('Vacuna Triple Felina', 2, 'Panleucopenia, rinotraqueítis y calicivirus', 'Zoetis', 2, 'VTF-9001', 25, 5, 'dosis', DATE_ADD(CURDATE(), INTERVAL 180 DAY), 60.00, 100.00, FALSE),
+('Vacuna Antirrábica', 2, 'Vacuna contra la rabia', 'Zoetis', 2, 'VAR-9002', 60, 10, 'dosis', DATE_ADD(CURDATE(), INTERVAL 220 DAY), 40.00, 75.00, FALSE),
+('Vacuna Quíntuple Canina', 2, 'Moquillo, hepatitis, parvovirus, parainfluenza', 'MSD', 2, 'VQC-9003', 40, 8, 'dosis', DATE_ADD(CURDATE(), INTERVAL 150 DAY), 90.00, 140.00, FALSE),
+('Vacuna Bordetella', 2, 'Tos de las perreras', 'MSD', 2, 'VBO-9004', 6, 5, 'dosis', DATE_SUB(CURDATE(), INTERVAL 10 DAY), 70.00, 120.00, FALSE),
+('Jeringas 5ml', 3, 'Jeringas desechables', 'MedPlus', 3, 'JER-5001', 200, 50, 'unidad', DATE_ADD(CURDATE(), INTERVAL 700 DAY), 1.00, 2.50, FALSE),
+('Gasas estériles', 3, 'Paquete de gasas estériles', 'MedPlus', 3, 'GAS-5002', 150, 40, 'unidad', DATE_ADD(CURDATE(), INTERVAL 600 DAY), 0.80, 1.50, FALSE),
+('Guantes de látex', 3, 'Guantes desechables', 'MedPlus', 3, 'GUA-5003', 300, 100, 'unidad', DATE_ADD(CURDATE(), INTERVAL 800 DAY), 1.00, 2.00, FALSE),
+('Sutura Nylon 3-0', 3, 'Hilo de sutura quirúrgica', 'SurgiVet', 3, 'SUT-5004', 5, 10, 'unidad', DATE_ADD(CURDATE(), INTERVAL 500 DAY), 22.00, 40.00, FALSE),
+('Alimento Renal 2kg', 4, 'Dieta para enfermedad renal', 'Hill''s', 4, 'ALI-7001', 20, 5, 'bolsa', DATE_ADD(CURDATE(), INTERVAL 270 DAY), 120.00, 180.00, FALSE),
+('Collar isabelino', 5, 'Collar de protección post-cirugía', 'PetCare', 4, NULL, 25, 5, 'unidad', NULL, 40.00, 80.00, FALSE),
+('Antipulgas NexGard', 1, 'Antipulgas y garrapatas masticable', 'Boehringer', 1, 'NEX-2407', 35, 10, 'tableta', DATE_ADD(CURDATE(), INTERVAL 350 DAY), 150.00, 220.00, FALSE);
 
 INSERT INTO prescripciones (consulta_id, procedimiento_id, producto_id, cantidad, dosis, frecuencia, duracion_dias, instrucciones) VALUES
 (1, NULL, 1, 14, '1 tableta', 'Cada 12 horas', 7, 'Dar con comida'),
@@ -197,35 +197,35 @@ INSERT INTO movimientos_inventario (producto_id, tipo_movimiento, cantidad, stoc
 -- =========== MÓDULO 4: SERVICIOS Y FACTURAS ===========
 
 INSERT INTO servicios (nombre, descripcion, categoria, precio_base, duracion_estimada_minutos) VALUES
-('Consulta general', 'Consulta veterinaria general', 'Consulta', 50000.00, 30),
-('Vacunación', 'Aplicación de vacuna (la vacuna se cobra aparte)', 'Prevención', 35000.00, 15),
-('Esterilización', 'Cirugía de esterilización', 'Cirugía', 280000.00, 60),
-('Limpieza dental', 'Profilaxis dental con ultrasonido', 'Odontología', 150000.00, 45),
-('Desparasitación', 'Tratamiento antiparasitario', 'Prevención', 30000.00, 15),
-('Examen de sangre', 'Hemograma y química sanguínea', 'Laboratorio', 90000.00, 20),
-('Radiografía', 'Estudio de imagen', 'Laboratorio', 120000.00, 20),
-('Baño y peluquería', 'Servicio de estética', 'Estética', 40000.00, 60),
-('Atención de emergencia', 'Atención urgente', 'Consulta', 100000.00, 45),
-('Control de peso', 'Seguimiento de peso y dieta', 'Consulta', 20000.00, 15);
+('Consulta general', 'Consulta veterinaria general', 'Consulta', 150.00, 30),
+('Vacunación', 'Aplicación de vacuna (la vacuna se cobra aparte)', 'Prevención', 60.00, 15),
+('Esterilización', 'Cirugía de esterilización', 'Cirugía', 800.00, 60),
+('Limpieza dental', 'Profilaxis dental con ultrasonido', 'Odontología', 450.00, 45),
+('Desparasitación', 'Tratamiento antiparasitario', 'Prevención', 80.00, 15),
+('Examen de sangre', 'Hemograma y química sanguínea', 'Laboratorio', 250.00, 20),
+('Radiografía', 'Estudio de imagen', 'Laboratorio', 300.00, 20),
+('Baño y peluquería', 'Servicio de estética', 'Estética', 100.00, 60),
+('Atención de emergencia', 'Atención urgente', 'Consulta', 300.00, 45),
+('Control de peso', 'Seguimiento de peso y dieta', 'Consulta', 50.00, 15);
 
--- Los totales ya incluyen el descuento del club y el IVA del 19%
+-- Los totales ya incluyen el descuento del club y el IVA del 12% (valores en quetzales)
 INSERT INTO facturas (dueno_id, numero_factura, fecha_emision, subtotal, impuesto, descuento, total, metodo_pago, estado, observaciones) VALUES
-(2, 'FAC-2026-000001', DATE_SUB(NOW(), INTERVAL 40 DAY), 71000.00, 13490.00, 0.00, 84490.00, 'Efectivo', 'Pagada', 'Consulta #1 - mascota Max'),
-(3, 'FAC-2026-000002', DATE_SUB(NOW(), INTERVAL 20 DAY), 78000.00, 14820.00, 0.00, 92820.00, 'Tarjeta', 'Pagada', 'Consulta #3 - mascota Rocky'),
-(2, 'FAC-2026-000003', DATE_SUB(NOW(), INTERVAL 25 DAY), 308000.00, 55594.00, 15400.00, 348194.00, 'Tarjeta', 'Pagada', 'Procedimiento #1 - mascota Luna'),
-(4, 'FAC-2026-000004', DATE_SUB(NOW(), INTERVAL 8 DAY), 65000.00, 12350.00, 0.00, 77350.00, 'Transferencia', 'Pagada', 'Venta directa - vacuna antirrábica'),
-(5, 'FAC-2026-000005', DATE_SUB(NOW(), INTERVAL 12 DAY), 150000.00, 28500.00, 0.00, 178500.00, NULL, 'Pendiente', 'Procedimiento #2 - mascota Toby');
+(2, 'FAC-2026-000001', DATE_SUB(NOW(), INTERVAL 40 DAY), 220.00, 26.40, 0.00, 246.40, 'Efectivo', 'Pagada', 'Consulta #1 - mascota Max'),
+(3, 'FAC-2026-000002', DATE_SUB(NOW(), INTERVAL 20 DAY), 240.00, 28.80, 0.00, 268.80, 'Tarjeta', 'Pagada', 'Consulta #3 - mascota Rocky'),
+(2, 'FAC-2026-000003', DATE_SUB(NOW(), INTERVAL 25 DAY), 890.00, 101.46, 44.50, 946.96, 'Tarjeta', 'Pagada', 'Procedimiento #1 - mascota Luna'),
+(4, 'FAC-2026-000004', DATE_SUB(NOW(), INTERVAL 8 DAY), 135.00, 16.20, 0.00, 151.20, 'Transferencia', 'Pagada', 'Venta directa - vacuna antirrábica'),
+(5, 'FAC-2026-000005', DATE_SUB(NOW(), INTERVAL 12 DAY), 450.00, 54.00, 0.00, 504.00, NULL, 'Pendiente', 'Procedimiento #2 - mascota Toby');
 
 INSERT INTO items_factura (factura_id, tipo_item, producto_id, servicio_id, servicio_descripcion, cantidad, precio_unitario, subtotal) VALUES
-(1, 'Servicio', NULL, 1, 'Consulta general', 1, 50000.00, 50000.00),
-(1, 'Producto', 1, NULL, 'Amoxicilina 500mg', 14, 1500.00, 21000.00),
-(2, 'Servicio', NULL, 1, 'Consulta general', 1, 50000.00, 50000.00),
-(2, 'Producto', 2, NULL, 'Meloxicam 1.5mg/ml', 1, 28000.00, 28000.00),
-(3, 'Servicio', NULL, 3, 'Esterilización', 1, 280000.00, 280000.00),
-(3, 'Producto', 2, NULL, 'Meloxicam 1.5mg/ml', 1, 28000.00, 28000.00),
-(4, 'Servicio', NULL, 2, 'Vacunación', 1, 35000.00, 35000.00),
-(4, 'Producto', 8, NULL, 'Vacuna Antirrábica', 1, 30000.00, 30000.00),
-(5, 'Servicio', NULL, 4, 'Limpieza dental', 1, 150000.00, 150000.00);
+(1, 'Servicio', NULL, 1, 'Consulta general', 1, 150.00, 150.00),
+(1, 'Producto', 1, NULL, 'Amoxicilina 500mg', 14, 5.00, 70.00),
+(2, 'Servicio', NULL, 1, 'Consulta general', 1, 150.00, 150.00),
+(2, 'Producto', 2, NULL, 'Meloxicam 1.5mg/ml', 1, 90.00, 90.00),
+(3, 'Servicio', NULL, 3, 'Esterilización', 1, 800.00, 800.00),
+(3, 'Producto', 2, NULL, 'Meloxicam 1.5mg/ml', 1, 90.00, 90.00),
+(4, 'Servicio', NULL, 2, 'Vacunación', 1, 60.00, 60.00),
+(4, 'Producto', 8, NULL, 'Vacuna Antirrábica', 1, 75.00, 75.00),
+(5, 'Servicio', NULL, 4, 'Limpieza dental', 1, 450.00, 450.00);
 
 -- =========== MÓDULO 5: ACTIVIDADES ESPECIALES ===========
 
@@ -240,7 +240,7 @@ INSERT INTO adopciones (mascota_adopcion_id, dueno_id, fecha_adopcion, contrato_
 
 -- Jornadas de vacunación
 INSERT INTO jornadas_vacunacion (nombre, fecha, hora_inicio, hora_fin, ubicacion, descripcion, capacidad_maxima, estado) VALUES
-('Jornada antirrábica - Barrio Centro', DATE_SUB(CURDATE(), INTERVAL 60 DAY), '08:00:00', '14:00:00', 'Parque Central', 'Vacunación antirrábica a bajo costo', 50, 'Finalizada'),
+('Jornada antirrábica - Barrio Centro', DATE_SUB(CURDATE(), INTERVAL 60 DAY), '08:00:00', '14:00:00', 'Parque Central, zona 1', 'Vacunación antirrábica a bajo costo', 50, 'Finalizada'),
 ('Jornada de vacunación felina', DATE_ADD(CURDATE(), INTERVAL 20 DAY), '09:00:00', '13:00:00', 'Clínica Happy Feet', 'Triple felina para gatos de la zona', 40, 'Planificada'),
 ('Jornada antirrábica del mes', CURDATE(), '08:00:00', '17:00:00', 'Clínica Happy Feet', 'Jornada en curso para probar el registro rápido', 30, 'En Curso');
 
@@ -256,29 +256,29 @@ INSERT INTO historial_medico (mascota_id, fecha_evento, evento_tipo_id, descripc
 (5, DATE_SUB(CURDATE(), INTERVAL 60 DAY), 1, 'Vacuna Antirrábica (Jornada antirrábica - Barrio Centro)', 2),
 (9, DATE_SUB(CURDATE(), INTERVAL 60 DAY), 1, 'Vacuna Antirrábica (Jornada antirrábica - Barrio Centro)', 2);
 
--- Club de mascotas frecuentes (1 punto por cada $1.000 pagados)
+-- Club de mascotas frecuentes (1 punto por cada Q10 pagados)
 -- Niveles: Bronce 0, Plata 500, Oro 1500, Platino 3000 puntos acumulados
 INSERT INTO club_mascotas (dueno_id, puntos_acumulados, puntos_canjeados, puntos_disponibles, nivel, fecha_inscripcion) VALUES
-(2, 732, 0, 732, 'Plata', DATE_SUB(CURDATE(), INTERVAL 60 DAY)),
-(3, 92, 0, 92, 'Bronce', DATE_SUB(CURDATE(), INTERVAL 30 DAY)),
-(4, 1577, 200, 1377, 'Oro', DATE_SUB(CURDATE(), INTERVAL 120 DAY));
+(2, 518, 0, 518, 'Plata', DATE_SUB(CURDATE(), INTERVAL 60 DAY)),
+(3, 26, 0, 26, 'Bronce', DATE_SUB(CURDATE(), INTERVAL 30 DAY)),
+(4, 1515, 200, 1315, 'Oro', DATE_SUB(CURDATE(), INTERVAL 120 DAY));
 
 INSERT INTO beneficios_club (nombre, descripcion, nivel_requerido, puntos_necesarios, tipo_beneficio, valor_beneficio) VALUES
 ('Consulta con 10% de descuento', 'Descuento en una consulta general', 'Bronce', 200, 'Descuento', 10.00),
-('Kit de bienvenida (collar)', 'Un collar de regalo', 'Bronce', 300, 'Producto Gratis', 25000.00),
-('Baño gratis', 'Un baño y peluquería sin costo', 'Bronce', 400, 'Servicio Gratis', 40000.00),
-('Desparasitación gratis', 'Una desparasitación sin costo', 'Plata', 600, 'Servicio Gratis', 30000.00),
+('Kit de bienvenida (collar)', 'Un collar de regalo', 'Bronce', 300, 'Producto Gratis', 80.00),
+('Baño gratis', 'Un baño y peluquería sin costo', 'Bronce', 400, 'Servicio Gratis', 100.00),
+('Desparasitación gratis', 'Una desparasitación sin costo', 'Plata', 600, 'Servicio Gratis', 80.00),
 ('Doble puntos por un mes', 'Gana el doble de puntos durante 30 días', 'Oro', 500, 'Puntos Extra', 2.00),
-('Limpieza dental gratis', 'Una limpieza dental sin costo', 'Platino', 3000, 'Servicio Gratis', 150000.00);
+('Limpieza dental gratis', 'Una limpieza dental sin costo', 'Platino', 3000, 'Servicio Gratis', 450.00);
 
 INSERT INTO transacciones_puntos (club_mascotas_id, factura_id, puntos, tipo, fecha, descripcion, saldo_anterior, saldo_nuevo) VALUES
-(1, NULL, 300, 'Ajuste', DATE_SUB(NOW(), INTERVAL 60 DAY), 'Bono de bienvenida', 0, 300),
-(1, 1, 84, 'Ganados', DATE_SUB(NOW(), INTERVAL 40 DAY), 'Compra factura FAC-2026-000001', 300, 384),
-(1, 3, 348, 'Ganados', DATE_SUB(NOW(), INTERVAL 25 DAY), 'Compra factura FAC-2026-000003', 384, 732),
-(2, 2, 92, 'Ganados', DATE_SUB(NOW(), INTERVAL 20 DAY), 'Compra factura FAC-2026-000002', 0, 92),
+(1, NULL, 400, 'Ajuste', DATE_SUB(NOW(), INTERVAL 60 DAY), 'Bono de bienvenida', 0, 400),
+(1, 1, 24, 'Ganados', DATE_SUB(NOW(), INTERVAL 40 DAY), 'Compra factura FAC-2026-000001', 400, 424),
+(1, 3, 94, 'Ganados', DATE_SUB(NOW(), INTERVAL 25 DAY), 'Compra factura FAC-2026-000003', 424, 518),
+(2, 2, 26, 'Ganados', DATE_SUB(NOW(), INTERVAL 20 DAY), 'Compra factura FAC-2026-000002', 0, 26),
 (3, NULL, 1500, 'Ajuste', DATE_SUB(NOW(), INTERVAL 120 DAY), 'Migración de puntos de clientes antiguos', 0, 1500),
-(3, 4, 77, 'Ganados', DATE_SUB(NOW(), INTERVAL 8 DAY), 'Compra factura FAC-2026-000004', 1500, 1577),
-(3, NULL, -200, 'Canjeados', DATE_SUB(NOW(), INTERVAL 8 DAY), 'Canje: Consulta con 10% de descuento', 1577, 1377);
+(3, 4, 15, 'Ganados', DATE_SUB(NOW(), INTERVAL 8 DAY), 'Compra factura FAC-2026-000004', 1500, 1515),
+(3, NULL, -200, 'Canjeados', DATE_SUB(NOW(), INTERVAL 8 DAY), 'Canje: Consulta con 10% de descuento', 1515, 1315);
 
 INSERT INTO canjes_beneficios (club_mascotas_id, beneficio_id, fecha_canje, puntos_canjeados, estado, fecha_expiracion, factura_id) VALUES
 (3, 1, DATE_SUB(NOW(), INTERVAL 8 DAY), 200, 'Aplicado', DATE_ADD(CURDATE(), INTERVAL 22 DAY), 4);

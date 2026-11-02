@@ -19,8 +19,8 @@ import java.util.Optional;
 /** Club de Mascotas Frecuentes: puntos por compras, niveles y canje de beneficios. */
 public class ClubService {
 
-    /** Se gana 1 punto por cada $1.000 pagados. */
-    private static final BigDecimal VALOR_POR_PUNTO = BigDecimal.valueOf(1000);
+    /** Se gana 1 punto por cada Q10 pagados. */
+    private static final BigDecimal VALOR_POR_PUNTO = BigDecimal.valueOf(10);
 
     private final ClubRepository clubRepository;
     private final DuenoService duenoService;
