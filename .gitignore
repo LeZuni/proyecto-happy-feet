@@ -1,0 +1,24 @@
+# Maven
+/target/
+
+# Archivos compilados de Java
+*.class
+
+# Configuracion de los IDEs
+.idea/
+.vscode/
+*.iml
+nbproject/private/
+/nbbuild/
+/dist/
+nb-configuration.xml
+
+# Logs generados por la aplicacion
+*.log
+
+# Facturas de texto que genera el programa
+/facturas/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
