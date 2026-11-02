@@ -79,13 +79,13 @@ src/main/java/com/happyfeet
 - Entradas de stock (reabastecimiento), historial de movimientos y registro de proveedores.
 
 ### 4. Facturación y reportes
-- Factura en texto plano de una consulta, un procedimiento o una venta directa, con subtotal, descuento, IVA (19 %) y total. Se guarda también en `facturas/NUMERO.txt`.
+- Factura en texto plano de una consulta, un procedimiento o una venta directa, con subtotal, descuento, IVA (12 %) y total. Se guarda también en `facturas/NUMERO.txt`.
 - Reportes en consola: servicios más solicitados, desempeño del equipo veterinario, estado del inventario y facturación por período.
 
 ### 5. Actividades especiales
 - **Días de adopción:** registro de mascotas disponibles y contrato de adopción en texto (la mascota pasa al adoptante).
 - **Jornadas de vacunación:** registro rápido y masivo (se elige la vacuna una vez y luego solo se escriben ids de mascotas), con control de capacidad y descuento de inventario.
-- **Club de Mascotas Frecuentes:** 1 punto por cada $1.000 pagados, niveles Bronce / Plata / Oro / Platino (descuento de 0 %, 5 %, 10 % y 15 % en las facturas) y canje de beneficios.
+- **Club de Mascotas Frecuentes:** 1 punto por cada Q10 pagados, niveles Bronce / Plata / Oro / Platino (descuento de 0 %, 5 %, 10 % y 15 % en las facturas) y canje de beneficios.
 
 ## Modelo de la base de datos
 

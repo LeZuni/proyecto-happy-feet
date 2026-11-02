@@ -16,8 +16,8 @@ public final class FacturaTexto {
         StringBuilder sb = new StringBuilder();
         sb.append(LINEA).append('\n');
         sb.append(centrar("VETERINARIA HAPPY FEET")).append('\n');
-        sb.append(centrar("NIT 900.123.456-7  |  Tel (601) 555-0123")).append('\n');
-        sb.append(centrar("Calle 45 # 12-34, Bogota")).append('\n');
+        sb.append(centrar("NIT 1234567-8  |  Tel (502) 2555-0123")).append('\n');
+        sb.append(centrar("12 calle 5-34, zona 10, Ciudad de Guatemala")).append('\n');
         sb.append(LINEA).append('\n');
         sb.append("FACTURA No: ").append(f.numero()).append('\n');
         sb.append("Fecha:      ").append(Formato.fechaHora(f.fechaEmision())).append('\n');
@@ -36,7 +36,7 @@ public final class FacturaTexto {
         sb.append(LINEA_FINA).append('\n');
         sb.append(String.format("%-49s %14s%n", "Subtotal:", Formato.dinero(f.subtotal())));
         sb.append(String.format("%-49s %14s%n", "Descuento:", "-" + Formato.dinero(f.descuento())));
-        sb.append(String.format("%-49s %14s%n", "IVA (19%):", Formato.dinero(f.impuesto())));
+        sb.append(String.format("%-49s %14s%n", "IVA (12%):", Formato.dinero(f.impuesto())));
         sb.append(LINEA_FINA).append('\n');
         sb.append(String.format("%-49s %14s%n", "TOTAL A PAGAR:", Formato.dinero(f.total())));
         sb.append(LINEA_FINA).append('\n');
