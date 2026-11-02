@@ -140,7 +140,7 @@ cd proyecto-happy-feet
 Abre `src/main/resources/db.properties` y cambia los datos de tu MySQL:
 
 ```properties
-db.url=jdbc:mysql://localhost:3306/happy_feet_veterinaria?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Bogota
+db.url=jdbc:mysql://localhost:3306/happy_feet_veterinaria?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Guatemala
 db.user=root
 db.password=TU_CONTRASEÑA
 ```
