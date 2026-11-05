@@ -14,4 +14,4 @@ public class ConsolaAlertaObservador implements Observador {
         System.out.println("Stock Mínimo: " + producto.getStockMinimo());
         System.out.println("========================================");
     }
-}
+}git config --global
